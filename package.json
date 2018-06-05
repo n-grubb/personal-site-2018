@@ -1,0 +1,36 @@
+{
+    "name": "noahgrubb.com",
+    "version": "0.0.1",
+    "description": "new design for noahgrubb.com",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "scss": "node-sass --output-style compressed src/sass/global.sass -o css",
+        "css:watch": "npm run css && npm run css -- -w",
+        "autoprefixer": "postcss -u autoprefixer -r css/*",
+        "build:css": "npm run scss && npm run autoprefixer",
+        "lint": "eslint src/js",
+        "uglify": "mkdir -p js && uglifyjs src/js/*.js -m -o js/noah.js && uglifyjs src/js/*.js -m -c -o js/noah.min.js",
+        "build:js": "npm run lint && npm run uglify",
+        "build:all": "npm run build:css && npm run build:js -- -w"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/n-grubb/personal-site.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/n-grubb/personal-site/issues"
+    },
+    "homepage": "https://github.com/n-grubb/personal-site#readme",
+    "dependencies": {
+        "autoprefixer": "^8.6.0",
+        "node-sass": "^4.9.0",
+        "postcss-cli": "^5.0.0",
+        "uglify-js": "^3.4.0"
+    },
+    "devDependencies": {
+        "eslint": "^4.19.1"
+    }
+}
