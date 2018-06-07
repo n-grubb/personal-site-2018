@@ -1,8 +1,8 @@
 #wave-container 
     position: relative
-    height: 400px
+    height: 600px
     padding-top: 100px
-    overflow-x: hidden
+    overflow: hidden
 
 .wave
     position: absolute
@@ -120,6 +120,15 @@
     .wave6 
         bottom: 200px
 
+@media (max-width: 1400px)
+    #wave-container 
+        height: 500px
+        padding-top: 0
+        
+@media (max-width: 1000px)
+    #wave-container 
+        height: 400px
+
 @media (max-width: 768px)
     #wave-container 
         height: 300px
@@ -140,6 +149,7 @@
 @media (max-width: 600px)
     #wave-container 
         height: 200px
+        padding-top: 50px
 
     .wave1
         bottom: 0px
