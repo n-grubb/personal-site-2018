@@ -1,0 +1,1 @@
+#tools{width:60%;margin:200px auto;position:relative}ul#tech-icons{list-style:none;display:grid;grid-template-columns:25% 25% 25% 25%;grid-template-rows:50% 50%}ul#tech-icons i{font-size:1.5rem}@media (max-width: 1000px){#tools{width:80%}}@media (max-width: 768px){#tools{width:90%}}@media (max-width: 600px){#tools{margin:100px auto}}

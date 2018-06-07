@@ -1,4 +1,59 @@
 #about 
-    margin-top: 100px
     width: 80%
+    margin: 150px auto
+    display: grid
+    grid-template-columns: 60% 40%
+    position: relative
+
+.content-container
+    grid-column-start: 1
+    grid-column-end: 1
+    grid-row-start: 1
+    grid-row-end: 1
+    padding-right: 25px
+
+    h1 
+        margin-top: 5%
     
+.img-container
+    grid-column-start: 2
+    grid-column-end: 2
+    grid-row-start: 1
+    grid-row-end: 1
+
+    img 
+        max-width: 100%
+        height: auto
+        max-height: 500px
+
+
+
+@media (max-width: 1200px)
+    #about 
+        width: 90%
+
+
+@media (max-width: 768px)
+    #about
+        grid-template-columns: 100%
+        grid-template-rows: 50% 50%
+
+    .content-container
+        grid-column-start: 1
+        grid-column-end: 1
+        grid-row-start: 1
+        grid-row-end: 1
+
+    .img-container
+        grid-column-start: 1
+        grid-column-end: 1
+        grid-row-start: 2
+        grid-row-end: 2
+        text-align: center
+
+        img 
+            max-width: 80%
+
+@media (max-width: 600px)
+    #about
+        margin: 30px auto

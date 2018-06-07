@@ -6,13 +6,13 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "scss": "node-sass --output-style compressed src/sass/global.sass -o css",
-        "css:watch": "npm run css && npm run css -- -w",
+        "css:watch": "npm run scss && npm run scss -- -w",
         "autoprefixer": "postcss -u autoprefixer -r css/*",
         "build:css": "npm run scss && npm run autoprefixer",
         "lint": "eslint src/js",
         "uglify": "mkdir -p js && uglifyjs src/js/*.js -m -o js/noah.js && uglifyjs src/js/*.js -m -c -o js/noah.min.js",
         "build:js": "npm run lint && npm run uglify",
-        "build:all": "npm run build:css && npm run build:js -- -w"
+        "build:all": "npm run build:css && npm run build:js"
     },
     "repository": {
         "type": "git",
